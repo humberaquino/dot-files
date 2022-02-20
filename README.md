@@ -9,6 +9,13 @@ ln -s ~/dot-files/nvim
 
 Packer is autoinstalled if not found.
 You just need to:
-1. Open nvim and close it
-2. Open again and run `:PackerSync`
-3. Close and open one last time. At this point everything should be ready
+1. Open nvim, wait a few secs for Packer autoinstall
+2. Run `:PackerSync`
+3. Close and open and that's it
+
+## Clean up caches
+
+```
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+```
