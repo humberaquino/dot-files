@@ -56,7 +56,7 @@ local setup = {
 		align = "left", -- align columns left, center or right
 	},
 	ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-	hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+	hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
 	show_help = true, -- show help message on the command line when the popup is visible
 	triggers = "auto", -- automatically setup triggers
 	-- triggers = {"<leader>"} -- or specify a list manually
@@ -80,21 +80,22 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["b"] = {
-		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-		"Buffers",
-	},
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["q"] = { "<cmd>q!<CR>", "Quit" },
-	["c"] = { "<cmd>BufferClose<CR>", "Close Buffer" },
-	["s"] = { "<cmd>w<CR>", "Save" },
-	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false, hidden=true})<cr>",
-		"Find files",
-	},
-	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+	["q"] = { "<cmd>q!<cr>", "Quit" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+
+	b = {
+		name = "Buffer",
+		c = { "<cmd>BufferClose<cr>", "Close" },
+		k = { "<cmd>BufferCloseAllButCurrent<cr>", "Close all but current" },
+		p = { "<cmd>BufferPick<cr>", "Pick" },
+		o = { "<cmd>BufferOrderByDirectory<cr>", "Order by directory" },
+		l = {
+			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+			"Buffers",
+		},
+		w = { "<cmd>w<cr>", "Save" },
+	},
 
 	p = {
 		name = "Packer",
@@ -107,7 +108,7 @@ local mappings = {
 
 	g = {
 		name = "Git",
-		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -143,7 +144,7 @@ local mappings = {
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
 		j = {
-			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
+			"<cmd>lua vim.lsp.diagnostic.goto_next()<cr>",
 			"Next Diagnostic",
 		},
 		k = {
@@ -159,17 +160,21 @@ local mappings = {
 			"Workspace Symbols",
 		},
 	},
-	t = {
+	n = {
+		name = "No more",
+		h = { "<cmd>nohlsearch<cr>", "Highlight" },
+	},
+	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-		C = { "<cmd>Telescope commands<cr>", "Commands" },
-		s = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
+		c = { "<cmd>Telescope commands<cr>", "Commands" },
+		f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
+		g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
 	},
 
 	r = {
@@ -181,6 +186,25 @@ local mappings = {
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+	},
+
+	t = {
+		name = "Trouble",
+		o = { "<cmd>Trouble<cr>", "Open" },
+		d = { "<cmd>Trouble document_diagnostics<cr>", "Document" },
+		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace" },
+		l = { "<cmd>Trouble loclist<cr>", "Loclist" },
+		f = { "<cmd>Trouble quickfix<cr>", "Quickfix" },
+		r = { "<cmd>Trouble lsp_references<cr>", "LSP references" },
+	},
+
+	w = {
+		name = "Window",
+		h = { "<cmd>FocusSplitLeft<cr>", "Focus left" },
+		j = { "<cmd>FocusSplitDown<cr>", "Focus down" },
+		k = { "<cmd>FocusSplitUp<cr>", "Focus up" },
+		l = { "<cmd>FocusSplitRight<cr>", "Focus right" },
+		c = { "<cmd>q<cr>", "Close" },
 	},
 }
 

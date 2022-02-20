@@ -13,13 +13,13 @@ dashboard.section.header.val = {
 	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 dashboard.section.buttons.val = {
-	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
-	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
-	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
-	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
-	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+	dashboard.button("f", "  Find file", ":Telescope find_files <cr>"),
+	dashboard.button("e", "  New file", ":ene <BAR> startinsert <cr>"),
+	dashboard.button("p", "  Find project", ":Telescope projects <cr>"),
+	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <cr>"),
+	dashboard.button("t", "  Find text", ":Telescope live_grep <cr>"),
+	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <cr>"),
+	dashboard.button("q", "  Quit Neovim", ":qa<cr>"),
 }
 
 dashboard.section.footer.opts.hl = "Type"
