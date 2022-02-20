@@ -7,12 +7,8 @@ ln -s ~/dot-files/fish/config.fish
 cd ~/.config
 ln -s ~/dot-files/nvim
 
-### Install Packer
-
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-Ref: https://github.com/wbthomason/packer.nvim
-
+Packer is autoinstalled if not found.
+You just need to:
+1. Open nvim and close it
+2. Open again and run `:PackerSync`
+3. Close and open one last time. At this point everything should be ready
