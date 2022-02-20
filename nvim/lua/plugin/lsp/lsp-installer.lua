@@ -39,8 +39,8 @@ local enhance_server_opts = {
 lsp_installer.on_server_ready(function(server)
 	-- Specify the default options which we'll use to setup all servers
 	local opts = {
-		on_attach = require("user.lsp.handlers").on_attach,
-		capabilities = require("user.lsp.handlers").capabilities,
+		on_attach = require("plugin.lsp.handlers").on_attach,
+		capabilities = require("plugin.lsp.handlers").capabilities,
 	}
 
 	if enhance_server_opts[server.name] then
