@@ -91,4 +91,6 @@ return packer.startup(function(use)
 		"ruifm/gitlinker.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
+	use("kdheepak/lazygit.nvim")
 end)
