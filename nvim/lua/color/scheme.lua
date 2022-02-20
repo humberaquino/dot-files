@@ -1,8 +1,9 @@
 local status_ok, nightfox = pcall(require, "nightfox")
 if not status_ok then
-	return
+    return
 end
 
--- nightfox.load("duskfox")
-nightfox.load("nightfox")
--- nightfox.load("nordfox")
+local ok_file, _custom_conf = pcall(require, "color.custom")
+if not ok_file then
+    nightfox.load("nightfox")
+end
