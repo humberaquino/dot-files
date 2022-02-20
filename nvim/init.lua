@@ -1,9 +1,8 @@
 require("core.options")
 require("core.keymaps")
 require("core.autocommands")
-require("core.plugins")
+require("core.packer")
 require("color.scheme")
-
 require("plugin.search-setup")
 require("plugin.nvim-tree-setup")
 require("plugin.lsp")
