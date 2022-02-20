@@ -88,12 +88,12 @@ local mappings = {
 		name = "Buffer",
 		c = { "<cmd>BufferClose<cr>", "Close" },
 		k = { "<cmd>BufferCloseAllButCurrent<cr>", "Close all but current" },
-		p = { "<cmd>BufferPick<cr>", "Pick" },
-		o = { "<cmd>BufferOrderByDirectory<cr>", "Order by directory" },
 		l = {
 			"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 			"Buffers",
 		},
+		o = { "<cmd>BufferOrderByDirectory<cr>", "Order by directory" },
+		p = { "<cmd>BufferPick<cr>", "Pick" },
 		w = { "<cmd>w<cr>", "Save" },
 	},
 
@@ -108,10 +108,17 @@ local mappings = {
 
 	g = {
 		name = "Git",
+		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+		d = {
+			"<cmd>Gitsigns diffthis HEAD<cr>",
+			"Diff",
+		},
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
 		R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
@@ -119,13 +126,6 @@ local mappings = {
 		u = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",
-		},
-		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
-		d = {
-			"<cmd>Gitsigns diffthis HEAD<cr>",
-			"Diff",
 		},
 	},
 
@@ -135,10 +135,6 @@ local mappings = {
 		d = {
 			"<cmd>Telescope lsp_document_diagnostics<cr>",
 			"Document Diagnostics",
-		},
-		w = {
-			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
-			"Workspace Diagnostics",
 		},
 		f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
@@ -159,52 +155,58 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
+		w = {
+			"<cmd>Telescope lsp_workspace_diagnostics<cr>",
+			"Workspace Diagnostics",
+		},
 	},
+
 	n = {
 		name = "No more",
 		h = { "<cmd>nohlsearch<cr>", "Highlight" },
 	},
+
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-		R = { "<cmd>Telescope registers<cr>", "Registers" },
-		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
 		f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
 		g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
+		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
+		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+		R = { "<cmd>Telescope registers<cr>", "Registers" },
 	},
 
 	r = {
 		name = "Terminal",
-		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
 		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 
 	t = {
 		name = "Trouble",
-		o = { "<cmd>Trouble<cr>", "Open" },
 		d = { "<cmd>Trouble document_diagnostics<cr>", "Document" },
-		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace" },
-		l = { "<cmd>Trouble loclist<cr>", "Loclist" },
 		f = { "<cmd>Trouble quickfix<cr>", "Quickfix" },
+		l = { "<cmd>Trouble loclist<cr>", "Loclist" },
+		o = { "<cmd>Trouble<cr>", "Open" },
 		r = { "<cmd>Trouble lsp_references<cr>", "LSP references" },
+		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace" },
 	},
 
 	w = {
 		name = "Window",
+		c = { "<cmd>q<cr>", "Close" },
 		h = { "<cmd>FocusSplitLeft<cr>", "Focus left" },
 		j = { "<cmd>FocusSplitDown<cr>", "Focus down" },
 		k = { "<cmd>FocusSplitUp<cr>", "Focus up" },
 		l = { "<cmd>FocusSplitRight<cr>", "Focus right" },
-		c = { "<cmd>q<cr>", "Close" },
 	},
 }
 
