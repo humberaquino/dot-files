@@ -81,8 +81,8 @@ local opts = {
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["q"] = { "<cmd>q!<cr>", "Quit" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+	["q"] = { "<cmd>q!<cr>", "Quit" },
 
 	b = {
 		name = "Buffer",
@@ -95,15 +95,6 @@ local mappings = {
 		o = { "<cmd>BufferOrderByDirectory<cr>", "Order by directory" },
 		p = { "<cmd>BufferPick<cr>", "Pick" },
 		w = { "<cmd>w<cr>", "Save" },
-	},
-
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
 	},
 
 	g = {
@@ -127,6 +118,11 @@ local mappings = {
 			"<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
 			"Undo Stage Hunk",
 		},
+	},
+
+	h = {
+		p = { "<cmd>HopPattern<cr>", "Pattern" },
+		w = { "<cmd>HopWord<cr>", "Word" },
 	},
 
 	l = {
@@ -161,9 +157,34 @@ local mappings = {
 		},
 	},
 
+	m = {
+		name = "Misc",
+		r = { "<cmd>luafile %<cr>", "Reload lua file" },
+	},
+
 	n = {
 		name = "No more",
 		h = { "<cmd>nohlsearch<cr>", "Highlight" },
+	},
+
+	p = {
+		name = "Packer",
+		c = { "<cmd>PackerCompile<cr>", "Compile" },
+		i = { "<cmd>PackerInstall<cr>", "Install" },
+		s = { "<cmd>PackerSync<cr>", "Sync" },
+		S = { "<cmd>PackerStatus<cr>", "Status" },
+		u = { "<cmd>PackerUpdate<cr>", "Update" },
+	},
+
+	r = {
+		name = "Terminal",
+		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
 
 	s = {
@@ -179,17 +200,6 @@ local mappings = {
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
 	},
 
-	r = {
-		name = "Terminal",
-		f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
-		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-		p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
-		t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
-		u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
-		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-	},
-
 	t = {
 		name = "Trouble",
 		d = { "<cmd>Trouble document_diagnostics<cr>", "Document" },
@@ -197,6 +207,7 @@ local mappings = {
 		l = { "<cmd>Trouble loclist<cr>", "Loclist" },
 		o = { "<cmd>Trouble<cr>", "Open" },
 		r = { "<cmd>Trouble lsp_references<cr>", "LSP references" },
+		t = { "<cmd>TroubleToggle<cr>", "Toggle" },
 		w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace" },
 	},
 
