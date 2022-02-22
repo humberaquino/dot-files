@@ -16,7 +16,3 @@ map("n", "<S-k>", ":move -2<CR>", opts)
 
 -- Hop
 map("n", "f", "<cmd>HopChar2<cr>", opts)
-
--- Fast search
-map("n", "<S-f>", "<cmd>Telescope find_files hidden=true<cr>", opts)
-map("n", "<S-g>", "<cmd>Telescope live_grep theme=ivy<cr>", opts)
