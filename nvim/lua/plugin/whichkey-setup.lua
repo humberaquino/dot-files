@@ -94,6 +94,7 @@ local mappings = {
 		},
 		o = { "<cmd>BufferOrderByDirectory<cr>", "Order by directory" },
 		p = { "<cmd>BufferPick<cr>", "Pick" },
+		s = { "<cmd>w<cr>", "Save" },
 		w = { "<cmd>w<cr>", "Save" },
 	},
 
