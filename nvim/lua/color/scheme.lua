@@ -5,5 +5,5 @@ end
 
 local ok_file, _ = pcall(require, "color.custom")
 if not ok_file then
-	nightfox.load("nightfox")
+	vim.cmd("colorscheme nightfox")
 end
