@@ -80,8 +80,13 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")
 
-	-- Org
-	use("nvim-neorg/neorg")
+	-- Orgmode
+	use({
+		"nvim-orgmode/orgmode",
+		config = function()
+			require("orgmode").setup({})
+		end,
+	})
 
 	-- term
 	use("akinsho/toggleterm.nvim")
