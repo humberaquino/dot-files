@@ -60,7 +60,7 @@ return packer.startup(function(use)
 
 	use("goolord/alpha-nvim") -- fast and fully customizable greeter for neovim
 
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", before = "neorg" })
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--> LSP plugins
@@ -80,14 +80,12 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")
 
-	-- Orgmode
+	-- Neorg
 	use({
-		"nvim-orgmode/orgmode",
-		config = function()
-			require("orgmode").setup({})
-		end,
+		"nvim-neorg/neorg",
+		ft = "norg",
+		after = "nvim-treesitter", -- You may want to specify Telescope here as well
 	})
-
 	-- term
 	use("akinsho/toggleterm.nvim")
 

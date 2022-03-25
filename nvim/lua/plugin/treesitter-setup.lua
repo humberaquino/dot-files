@@ -10,6 +10,7 @@ configs.setup({
 		"lua",
 		"javascript",
 		"elixir",
+		"norg",
 	},
 
 	-- Install languages synchronously (only applied to `ensure_installed`)
