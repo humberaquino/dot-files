@@ -97,4 +97,7 @@ return packer.startup(function(use)
 
 	-- Neogit
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
+
+	-- Orgmode
+	use({ "nvim-orgmode/orgmode" })
 end)
