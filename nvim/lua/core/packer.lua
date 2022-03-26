@@ -81,10 +81,9 @@ return packer.startup(function(use)
 	use("f-person/git-blame.nvim")
 
 	-- Neorg
+	use("nvim-lua/plenary.nvim")
 	use({
 		"nvim-neorg/neorg",
-		ft = "norg",
-		after = "nvim-treesitter", -- You may want to specify Telescope here as well
 		requires = "nvim-lua/plenary.nvim",
 	})
 	-- term
