@@ -95,4 +95,7 @@ return packer.startup(function(use)
 		"ruifm/gitlinker.nvim",
 		requires = "nvim-lua/plenary.nvim",
 	})
+
+	-- Neogit
+	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
 end)
