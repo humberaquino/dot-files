@@ -88,6 +88,7 @@ local mappings = {
 		"<cmd>Telescope lsp_document_symbols<cr>",
 		"Document Symbols",
 	},
+	[","] = { "<cmd>Telescope buffers<cr>", "Buffers" },
 	["."] = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
 	["/"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 
@@ -209,6 +210,7 @@ local mappings = {
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		R = { "<cmd>Telescope registers<cr>", "Registers" },
+		T = { "<cmd>lua require'telescope.builtin'.colorscheme()<cr>", "Themes" },
 	},
 
 	t = {
