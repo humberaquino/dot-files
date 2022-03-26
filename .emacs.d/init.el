@@ -11,6 +11,15 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; General customization
+(tool-bar-mode -1)
+(menu-bar-mode -1) 
+(toggle-scroll-bar -1)
+
+;; Display line and column numbers
+(global-display-line-numbers-mode)
+(column-number-mode t)
+
 ;; use-package
 (straight-use-package 'use-package)
 (setq straight-use-package-by-default t)
@@ -54,11 +63,8 @@
   :bind (("C-x g" . magit-status)
          ("C-x C-g" . magit-status)))
 
-;; General customization
-(tool-bar-mode -1)
-(menu-bar-mode -1) 
-(toggle-scroll-bar -1)
+(use-package which-key
+    :config
+    (add-hook 'after-init-hook 'which-key-mode))
 
-;; Display line and column numbers
-(global-display-line-numbers-mode)
-(column-number-mode t)
+(use-package avy)
