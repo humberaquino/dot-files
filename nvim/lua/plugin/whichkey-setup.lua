@@ -83,6 +83,13 @@ local mappings = {
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["q"] = { "<cmd>q!<cr>", "Quit" },
+	["'"] = { "<cmd>Telescope resume<cr>", "Resume last search" },
+	["*"] = {
+		"<cmd>Telescope lsp_document_symbols<cr>",
+		"Document Symbols",
+	},
+	["."] = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
+	["/"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 
 	b = {
 		name = "Buffer",
@@ -109,6 +116,7 @@ local mappings = {
 		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+		n = { "<cmd>Neogit<cr>", "Neogit" },
 		o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
@@ -192,7 +200,7 @@ local mappings = {
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		c = { "<cmd>Telescope commands<cr>", "Commands" },
 		f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
-		g = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+		g = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
