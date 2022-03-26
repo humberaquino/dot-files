@@ -81,7 +81,7 @@ local opts = {
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["q"] = { "<cmd>q!<cr>", "Quit" },
 
 	b = {
@@ -167,7 +167,7 @@ local mappings = {
 		h = { "<cmd>nohlsearch<cr>", "Highlight" },
 	},
 
-	p = {
+	P = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },
 		i = { "<cmd>PackerInstall<cr>", "Install" },
