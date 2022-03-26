@@ -41,10 +41,18 @@
 (use-package doom-modeline
   :init (doom-modeline-mode 1))
 
-
+;; TTY cursor changer
 (use-package evil-terminal-cursor-changer
   :init (etcc-on))
-  
+
+;; TTY clipboard integration
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+
+(use-package magit
+  :bind (("C-x g" . magit-status)
+         ("C-x C-g" . magit-status)))
 
 ;; General customization
 (tool-bar-mode -1)
