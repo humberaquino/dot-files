@@ -129,6 +129,8 @@ local mappings = {
 	},
 
 	h = {
+		c = { "<cmd>HopChar1<cr>", "Line" },
+		l = { "<cmd>HopLine<cr>", "Line" },
 		p = { "<cmd>HopPattern<cr>", "Pattern" },
 		w = { "<cmd>HopWord<cr>", "Word" },
 	},
