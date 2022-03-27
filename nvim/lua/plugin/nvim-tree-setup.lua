@@ -8,10 +8,6 @@ vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_git_hl = 1
 
 nvimtree.setup({
-	auto_close = true,
-	update_focused_file = {
-		enable = true,
-	},
 	update_cwd = true,
 	update_focused_file = {
 		enable = true,
