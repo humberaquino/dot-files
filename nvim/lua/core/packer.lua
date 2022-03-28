@@ -56,11 +56,12 @@ return packer.startup(function(use)
 	use("phaazon/hop.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("folke/trouble.nvim")
-	use("beauwilliams/focus.nvim")
+	--use("beauwilliams/focus.nvim")
 
 	use("goolord/alpha-nvim") -- fast and fully customizable greeter for neovim
 
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", before = "neorg" })
+	-- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", before = "neorg" })
+	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--> LSP plugins
@@ -80,12 +81,12 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")
 
-	-- Neorg
-	use("nvim-lua/plenary.nvim")
-	use({
-		"nvim-neorg/neorg",
-		requires = "nvim-lua/plenary.nvim",
-	})
+	-- -- Neorg
+	-- use("nvim-lua/plenary.nvim")
+	-- use({
+	-- 	"nvim-neorg/neorg",
+	-- 	requires = "nvim-lua/plenary.nvim",
+	-- })
 	-- term
 	use("akinsho/toggleterm.nvim")
 

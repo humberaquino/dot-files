@@ -16,3 +16,9 @@ map("n", "<S-k>", ":move -2<CR>", opts)
 
 -- Hop
 map("n", "f", "<cmd>HopChar2<cr>", opts)
+
+-- Window
+map("n", "<C-h>", "<C-w>h", opts)
+map("n", "<C-j>", "<C-w>j", opts)
+map("n", "<C-k>", "<C-w>k", opts)
+map("n", "<C-l>", "<C-w>l", opts)
