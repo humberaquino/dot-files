@@ -227,12 +227,13 @@ local mappings = {
 	w = {
 		name = "Window",
 		c = { "<cmd>q<cr>", "Close" },
-		k = { "<C-w>k", "Focus up" },
-		j = { "<C-w>j", "Focus down" },
 		h = { "<C-w>h", "Focus left" },
+		j = { "<C-w>j", "Focus down" },
+		k = { "<C-w>k", "Focus up" },
 		l = { "<C-w>l", "Focus right" },
-		v = { "<cmd>vsplit<cr>", "Vertical split" },
+		o = { "<cmd>only<cr>", "Close all windows except current" },
 		s = { "<cmd>split<cr>", "Horizontal split" },
+		v = { "<cmd>vsplit<cr>", "Vertical split" },
 	},
 }
 
