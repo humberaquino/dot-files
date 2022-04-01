@@ -47,7 +47,7 @@ return packer.startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("kyazdani42/nvim-tree.lua")
 	use("rcarriga/nvim-notify")
-	use("nvim-lualine/lualine.nvim")
+	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("romgrk/barbar.nvim")
 	use("windwp/nvim-autopairs")
 	use("lukas-reineke/indent-blankline.nvim")
@@ -56,11 +56,9 @@ return packer.startup(function(use)
 	use("phaazon/hop.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("folke/trouble.nvim")
-	--use("beauwilliams/focus.nvim")
 
 	use("goolord/alpha-nvim") -- fast and fully customizable greeter for neovim
 
-	-- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", before = "neorg" })
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
