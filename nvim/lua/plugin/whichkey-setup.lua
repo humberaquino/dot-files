@@ -80,7 +80,8 @@ local opts = {
 
 local mappings = {
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { '<cmd>lua require"nvim-tree".toggle(false, true)<cr>', "Explorer" },
+	["E"] = { "<cmd>NvimTreeFocus<cr>", "Explorer" },
 	["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 	["q"] = { "<cmd>q!<cr>", "Quit" },
 	["'"] = { "<cmd>Telescope resume<cr>", "Resume last search" },
