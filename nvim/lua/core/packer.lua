@@ -79,13 +79,6 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")
 
-	-- -- Neorg
-	-- use("nvim-lua/plenary.nvim")
-	-- use({
-	-- 	"nvim-neorg/neorg",
-	-- 	requires = "nvim-lua/plenary.nvim",
-	-- })
-	-- term
 	use("akinsho/toggleterm.nvim")
 
 	-- Git linker
@@ -104,4 +97,7 @@ return packer.startup(function(use)
 
 	-- move
 	use({ "fedepujol/move.nvim" })
+
+	-- surround
+	use({ "ur4ltz/surround.nvim" })
 end)
