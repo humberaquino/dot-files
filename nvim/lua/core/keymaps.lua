@@ -10,10 +10,6 @@ vim.g.maplocalleader = " "
 map("n", "<S-h>", "<cmd>BufferPrevious<cr>", opts)
 map("n", "<S-l>", "<cmd>BufferNext<cr>", opts)
 
--- Move line / block
-map("n", "<S-j>", ":move +1<CR>", opts)
-map("n", "<S-k>", ":move -2<CR>", opts)
-
 -- Hop
 map("n", "f", "<cmd>HopChar2<cr>", opts)
 
@@ -22,3 +18,13 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
+
+-- Move
+map("n", "<A-j>", ":MoveLine(1)<CR>", { noremap = true, silent = true })
+map("n", "<A-k>", ":MoveLine(-1)<CR>", { noremap = true, silent = true })
+map("v", "<A-j>", ":MoveBlock(1)<CR>", { noremap = true, silent = true })
+map("v", "<A-k>", ":MoveBlock(-1)<CR>", { noremap = true, silent = true })
+map("n", "<A-l>", ":MoveHChar(1)<CR>", { noremap = true, silent = true })
+map("n", "<A-h>", ":MoveHChar(-1)<CR>", { noremap = true, silent = true })
+map("v", "<A-l>", ":MoveHBlock(1)<CR>", { noremap = true, silent = true })
+map("v", "<A-h>", ":MoveHBlock(-1)<CR>", { noremap = true, silent = true })

@@ -101,4 +101,7 @@ return packer.startup(function(use)
 	use({ "nvim-orgmode/orgmode" })
 
 	use({ "simrat39/symbols-outline.nvim" })
+
+	-- move
+	use({ "fedepujol/move.nvim" })
 end)
