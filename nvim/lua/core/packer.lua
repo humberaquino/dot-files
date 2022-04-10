@@ -100,4 +100,7 @@ return packer.startup(function(use)
 
 	-- surround
 	use({ "ur4ltz/surround.nvim" })
+
+	-- Debugger
+	use("mfussenegger/nvim-dap")
 end)

@@ -107,6 +107,15 @@ local mappings = {
 		w = { "<cmd>w<cr>", "Save" },
 	},
 
+	d = {
+		name = "Debug",
+		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
+		r = { "<cmd>lua require'dap'.repl.open()<cr>", "REPL" },
+		s = { "<cmd>lua require'dap'.step_over()<cr>", "Step over" },
+	},
+
 	g = {
 		name = "Git",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
