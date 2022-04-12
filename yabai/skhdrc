@@ -1,0 +1,106 @@
+#SKHD STUFF
+
+## Close active application
+ctrl + alt + cmd - delete : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
+
+## open terminal
+ctrl + alt + cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
+
+## Focus window
+ctrl + alt + cmd - 0x29 : yabai -m window --focus recent
+ctrl + alt + cmd - h : yabai -m window --focus west
+ctrl + alt + cmd - j : yabai -m window --focus south
+ctrl + alt + cmd - k : yabai -m window --focus north
+ctrl + alt + cmd - l : yabai -m window --focus east
+
+## Swap window to display
+ctrl + alt + cmd - o : yabai -m window --display west; yabai -m display --focus west
+ctrl + alt + cmd - p : yabai -m window --display east; yabai -m display --focus east
+
+## Resize window
+# increase window size
+shift + alt - h : yabai -m window --resize left:-20:0
+shift + alt - j : yabai -m window --resize bottom:0:20
+shift + alt - k : yabai -m window --resize top:0:-20
+shift + alt - l : yabai -m window --resize right:20:0
+
+# decrease window size
+shift + cmd - h : yabai -m window --resize left:20:0
+shift + cmd - j : yabai -m window --resize bottom:0:-20
+shift + cmd - k : yabai -m window --resize top:0:20
+shift + cmd - l : yabai -m window --resize right:-20:0
+
+## Focus display/screen
+ctrl + alt + cmd - u : yabai -m display --focus 1
+ctrl + alt + cmd - i : yabai -m display --focus 2
+
+## Move window
+ctrl + alt + cmd - n : yabai -m window --warp west
+ctrl + alt + cmd - m : yabai -m window --warp south
+ctrl + alt + cmd - 0x2B : yabai -m window --warp north
+ctrl + alt + cmd - 0x2F : yabai -m window --warp east
+
+# balance size of windows
+ctrl + alt + cmd - 0x18 : yabai -m space --balance # - key
+
+# change layout of desktop
+cmd + ctrl + alt - 0x18 : yabai -m space --layout bsp # = key
+alt + cmd - 0x18 : yabai -m space --layout float
+
+# Toggle split type 
+ctrl + alt + cmd - space: yabai -m window --toggle split
+
+# Spaces
+ctrl + alt + cmd - 6 : yabai -m space --focus 1
+ctrl + alt + cmd - 7 : yabai -m space --focus 2
+ctrl + alt + cmd - 8 : yabai -m space --focus 3
+ctrl + alt + cmd - 9 : yabai -m space --focus 5
+ctrl + alt + cmd - 0 : yabai -m space --focus 6
+# No anda
+# #ctrl + alt + cmd - 0x1b : yabai -m space --focus 7
+
+# ctrl + alt + cmd - 6 : /Users/humber/Scripts/switch-space.sh 1
+# ctrl + alt + cmd - 7 : /Users/humber/Scripts/switch-space.sh 2
+# ctrl + alt + cmd - 8 : /Users/humber/Scripts/switch-space.sh 4
+# ctrl + alt + cmd - 9 : /Users/humber/Scripts/switch-space.sh 5
+# ctrl + alt + cmd - 0 : /Users/humber/Scripts/switch-space.sh 6
+#
+
+# send window to space and switch focus 
+alt + cmd - 6 : yabai -m window --space 1 && yabai -m space --focus 1 
+alt + cmd - 7 : yabai -m window --space 2 && yabai -m space --focus 2 
+alt + cmd - 8 : yabai -m window --space 4 && yabai -m space --focus 3
+alt + cmd - 9 : yabai -m window --space 5 && yabai -m space --focus 5
+alt + cmd - 0 : yabai -m window --space 6 && yabai -m space --focus 6
+
+# send window to space without chaning focus
+ctrl + alt - 6 : yabai -m window --space 1 
+ctrl + alt - 7 : yabai -m window --space 2 
+ctrl + alt - 8 : yabai -m window --space 3
+ctrl + alt - 9 : yabai -m window --space 5
+ctrl + alt - 0 : yabai -m window --space 6
+#ctrl + alt - 0x1b : yabai -m window --space 7
+
+## rotate tree 90
+ctrl + alt + cmd - r : yabai -m space --rotate 90
+
+## flip the tree vertically
+ctrl + alt + cmd - 4 : yabai -m space --mirror y-axis
+# mirror tree y-axis
+#alt - y : yabai -m space --mirror y-axis
+## mirror tree x-axis
+#alt - x : yabai -m space --mirror x-axis
+
+#move active window to next space on current display
+ctrl + alt + cmd - f : yabai -m window --toggle zoom-fullscreen
+
+# resize
+# increase size of the left-child (decrease size of right-child) of the containing node
+#yabai -m window --ratio rel:0.2
+
+# increase size of the right-child (decrease size of left-child) of the containing node
+#yabai -m window --ratio rel:-0.2
+
+# set the value of the split directly:
+shift + alt - m : yabai -m window --ratio abs:0.70
+
