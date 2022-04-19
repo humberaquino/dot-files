@@ -51,34 +51,22 @@ alt + cmd - 0x18 : yabai -m space --layout float
 ctrl + alt + cmd - space: yabai -m window --toggle split
 
 # Spaces
-ctrl + alt + cmd - 6 : yabai -m space --focus 1
-ctrl + alt + cmd - 7 : yabai -m space --focus 2
-ctrl + alt + cmd - 8 : yabai -m space --focus 3
-ctrl + alt + cmd - 9 : yabai -m space --focus 5
-ctrl + alt + cmd - 0 : yabai -m space --focus 6
-# No anda
-# #ctrl + alt + cmd - 0x1b : yabai -m space --focus 7
-
-# ctrl + alt + cmd - 6 : /Users/humber/Scripts/switch-space.sh 1
-# ctrl + alt + cmd - 7 : /Users/humber/Scripts/switch-space.sh 2
-# ctrl + alt + cmd - 8 : /Users/humber/Scripts/switch-space.sh 4
-# ctrl + alt + cmd - 9 : /Users/humber/Scripts/switch-space.sh 5
-# ctrl + alt + cmd - 0 : /Users/humber/Scripts/switch-space.sh 6
-#
+ctrl + alt + cmd - 7 : yabai -m space --focus 1
+ctrl + alt + cmd - 8 : yabai -m space --focus 2
+ctrl + alt + cmd - 9 : yabai -m space --focus 3
+ctrl + alt + cmd - 0 : yabai -m space --focus 4
 
 # send window to space and switch focus 
-alt + cmd - 6 : yabai -m window --space 1 && yabai -m space --focus 1 
-alt + cmd - 7 : yabai -m window --space 2 && yabai -m space --focus 2 
-alt + cmd - 8 : yabai -m window --space 4 && yabai -m space --focus 3
-alt + cmd - 9 : yabai -m window --space 5 && yabai -m space --focus 5
-alt + cmd - 0 : yabai -m window --space 6 && yabai -m space --focus 6
+alt + cmd - 7 : yabai -m window --space 2 && yabai -m space --focus 1
+alt + cmd - 8 : yabai -m window --space 4 && yabai -m space --focus 2
+alt + cmd - 9 : yabai -m window --space 5 && yabai -m space --focus 3
+alt + cmd - 0 : yabai -m window --space 6 && yabai -m space --focus 4
 
 # send window to space without chaning focus
-ctrl + alt - 6 : yabai -m window --space 1 
-ctrl + alt - 7 : yabai -m window --space 2 
-ctrl + alt - 8 : yabai -m window --space 3
-ctrl + alt - 9 : yabai -m window --space 5
-ctrl + alt - 0 : yabai -m window --space 6
+ctrl + alt - 7 : yabai -m window --space 1 
+ctrl + alt - 8 : yabai -m window --space 2
+ctrl + alt - 9 : yabai -m window --space 3
+ctrl + alt - 0 : yabai -m window --space 4
 #ctrl + alt - 0x1b : yabai -m window --space 7
 
 ## rotate tree 90
