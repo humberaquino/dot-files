@@ -17,10 +17,6 @@ set PATH $HOME/.local/bin $PATH
 set PATH /usr/local/bin $PATH
 set PATH ~/.emacs.d/bin $PATH
 
-
-set -x GOPATH $HOME/golang
-set -x GOROOT /usr/local/opt/go/libexec
-set PATH $GOPATH/bin $GOROOT/bin /usr/local/opt/mysql@5.7/bin $PATH
 set PATH /usr/local/sbin $PATH
 set PATH $HOME/.luarocks/bin $PATH
 
@@ -33,4 +29,8 @@ export BAT_THEME="TwoDark"
 
 set fish_greeting
 set -x FZF_DEFAULT_COMMAND 'fd'
+
+# Golang
+set gopath (go env GOPATH)
+set PATH $gopath/bin $PATH
 
