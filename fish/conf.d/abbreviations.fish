@@ -17,7 +17,10 @@ abbr --add keti 'kubectl exec -ti'
 abbr --add kgd 'kubectl get deployment'
 abbr --add kgi 'kubectl get ingress'
 abbr --add kgp 'kubectl get pods'
+abbr --add kgn 'kubectl get ns'
 abbr --add kgrs 'kubectl get rs'
+abbr --add kga 'kubectl get all'
+abbr --add kgaa 'kubectl get all --all-namespaces'
 abbr --add kgs 'kubectl get svc'
 abbr --add kgsec 'kubectl get secret'
 abbr --add kl 'kubectl logs'
@@ -58,3 +61,8 @@ abbr --add cvc code .
 abbr --add v 'nvim'
 abbr --add nv 'nvim'
 
+# Emacs
+abbr --add e 'emacs'
+
+# Terraform
+abbr --add tf 'terraform'

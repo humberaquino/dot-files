@@ -5,5 +5,6 @@ vim.cmd([[
     autocmd BufWritePre *.exs lua vim.lsp.buf.formatting_sync(nil, 5000)
     autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync()
     autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync()
+    autocmd BufWritePre *.tf lua vim.lsp.buf.formatting_sync()
   augroup end
 ]])
