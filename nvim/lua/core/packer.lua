@@ -48,7 +48,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("rcarriga/nvim-notify")
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
-	use("romgrk/barbar.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
 	use("windwp/nvim-autopairs")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("numToStr/Comment.nvim") -- Easily comment stuff

@@ -7,8 +7,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Move to previous/next
-map("n", "<S-h>", "<cmd>BufferPrevious<cr>", opts)
-map("n", "<S-l>", "<cmd>BufferNext<cr>", opts)
+map("n", "<S-h>", "<cmd>BufferLineCycleNext<cr>", opts)
+map("n", "<S-l>", "<cmd>BufferLineCyclePrev<cr>", opts)
 
 -- Hop
 map("n", "f", "<cmd>HopChar2<cr>", opts)
