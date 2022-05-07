@@ -106,4 +106,7 @@ return packer.startup(function(use)
 
 	-- Debugger
 	use("mfussenegger/nvim-dap")
+
+	-- Buffer close
+	use("kazhala/close-buffers.nvim")
 end)
