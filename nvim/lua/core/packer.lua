@@ -79,7 +79,10 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("f-person/git-blame.nvim")
 
-	use("akinsho/toggleterm.nvim")
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "v1.*",
+	})
 
 	-- Git linker
 	use({
