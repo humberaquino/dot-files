@@ -20,5 +20,8 @@ nvimtree.setup({
     highlight_git = true,
     highlight_opened_files = "icon"
   },
-  respect_buf_cwd = true
+  respect_buf_cwd = true,
+  view = {
+    width = 40
+  }
 })
