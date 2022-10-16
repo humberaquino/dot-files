@@ -11,6 +11,7 @@ local servers = {
   "yamlls",
   "sumneko_lua",
   "jsonls",
+  "emmet_ls"
 }
 
 for _, name in pairs(servers) do

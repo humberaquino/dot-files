@@ -21,7 +21,7 @@ set PATH /usr/local/sbin $PATH
 set PATH $HOME/.luarocks/bin $PATH
 
 source /usr/local/opt/asdf/asdf.fish
-
+set PATH /usr/local/opt/grep/libexec/gnubin $PATH
 set PATH $HOME/Bin $PATH
 
 # BAT theme
@@ -31,6 +31,11 @@ set fish_greeting
 set -x FZF_DEFAULT_COMMAND 'fd'
 
 # Golang
-set gopath (go env GOPATH)
-set PATH $gopath/bin $PATH
+# set gopath (go env GOPATH)
+# set PATH $gopath/bin $PATH
+
+# GOLANG configurations
+set -x GOPATH $HOME/golang
+set -x GOROOT /usr/local/opt/go/libexec
+set PATH $GOPATH/bin $GOROOT/bin $PATH
 
