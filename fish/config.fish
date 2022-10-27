@@ -16,7 +16,7 @@ set PATH $HOME/Library/Python/3.8/bin $PATH
 set PATH $HOME/.local/bin $PATH
 set PATH /usr/local/bin $PATH
 set PATH ~/.emacs.d/bin $PATH
-
+set PATH /usr/local/anaconda3/bin $PATH
 set PATH /usr/local/sbin $PATH
 set PATH $HOME/.luarocks/bin $PATH
 
@@ -38,4 +38,10 @@ set -x FZF_DEFAULT_COMMAND 'fd'
 set -x GOPATH $HOME/golang
 set -x GOROOT /usr/local/opt/go/libexec
 set PATH $GOPATH/bin $GOROOT/bin $PATH
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
 
