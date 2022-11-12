@@ -13,16 +13,18 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 
 set PATH $HOME/.cargo/bin $PATH
 set PATH $HOME/Library/Python/3.8/bin $PATH
-set PATH $HOME/.local/bin $PATH
+set PATH $HOME/.emacs.d/bin $PATH
 set PATH /usr/local/bin $PATH
-set PATH ~/.emacs.d/bin $PATH
 set PATH /usr/local/anaconda3/bin $PATH
 set PATH /usr/local/sbin $PATH
 set PATH $HOME/.luarocks/bin $PATH
+set PATH $HOME/.rd/bin $PATH
+set PATH $HOME/.local/bin $PATH
+set PATH $HOME/Bin $PATH
+set PATH /usr/local/opt/grep/libexec/gnubin $PATH
+set PATH /Users/humber/Programs/istio-1.15.3/bin $PATH
 
 source /usr/local/opt/asdf/asdf.fish
-set PATH /usr/local/opt/grep/libexec/gnubin $PATH
-set PATH $HOME/Bin $PATH
 
 # BAT theme
 export BAT_THEME="TwoDark"
@@ -42,6 +44,6 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
