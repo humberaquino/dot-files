@@ -1,6 +1,6 @@
 require("core.options")
 require("core.keymaps")
-require("core.autocommands")
+-- require("core.autocommands")
 require("core.packer")
 require("color.scheme")
 require("plugin.search-setup")
