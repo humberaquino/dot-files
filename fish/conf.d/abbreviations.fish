@@ -46,6 +46,7 @@ abbr --add ism 'iex -S mix'
 abbr --add ips 'iex -S mix phx.server'
 abbr --add prytest 'iex -S mix test --trace'
 abbr --add mt mix test
+abbr --add mtw mix test.watch
 
 # Python
 abbr --add py 'python'
