@@ -15,6 +15,8 @@ configs.setup({
     "elixir",
     "norg",
     "org",
+    "heex",
+    "eex"
   },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
