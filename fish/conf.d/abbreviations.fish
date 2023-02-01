@@ -67,3 +67,6 @@ abbr --add e 'emacs'
 
 # Terraform
 abbr --add tf 'terraform'
+
+# Vagrant
+abbr --add vs 'vagrant status'

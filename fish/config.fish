@@ -24,7 +24,7 @@ set PATH $HOME/Bin $PATH
 set PATH /usr/local/opt/grep/libexec/gnubin $PATH
 set PATH /Users/humber/Programs/istio-1.15.3/bin $PATH
 
-source /usr/local/opt/asdf/asdf.fish
+# source ~/.asdf/asdf.fish
 
 # BAT theme
 export BAT_THEME="TwoDark"
@@ -47,3 +47,5 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 # eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
+
+source /usr/local/opt/asdf/libexec/asdf.fish
