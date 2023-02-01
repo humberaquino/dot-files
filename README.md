@@ -19,3 +19,5 @@ You just need to:
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
+
+test1
