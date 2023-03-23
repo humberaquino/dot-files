@@ -45,7 +45,13 @@ return packer.startup(function(use)
   -- Base plugins
   use("kyazdani42/nvim-web-devicons")
   use("EdenEast/nightfox.nvim")
-  use("kyazdani42/nvim-tree.lua")
+  -- use("kyazdani42/nvim-tree.lua")
+  use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
+}
   use("rcarriga/nvim-notify")
   use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
   use({ "akinsho/bufferline.nvim", tag = "v2.*", requires = "kyazdani42/nvim-web-devicons" })
@@ -109,4 +115,6 @@ return packer.startup(function(use)
 
   -- Buffer close
   use("kazhala/close-buffers.nvim")
+  -- Copilot
+  use { 'github/copilot.vim', branch = 'release' }
 end)

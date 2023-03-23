@@ -9,7 +9,7 @@ local servers = {
   "pyright",
   "elixirls",
   "yamlls",
-  "sumneko_lua",
+  "lua_ls",
   "jsonls",
   "emmet_ls"
 }
