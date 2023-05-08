@@ -117,4 +117,7 @@ return packer.startup(function(use)
   use("kazhala/close-buffers.nvim")
   -- Copilot
   use { 'github/copilot.vim', branch = 'release' }
+-- Auto light/dark
+use ({'f-person/auto-dark-mode.nvim'})
+
 end)
