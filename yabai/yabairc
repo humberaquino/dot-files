@@ -30,6 +30,8 @@ yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 #yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Private Internet Access$" manage=off
 
+yabai -m rule --add app="^Slack$" space=4
+
 #find ~/Library/Parallels/Applications\ Menus/ -maxdepth 3 -type f | awk -F'/' '{ print $NF; }' | awk '{$1=$1};1' | sort | uniq | tr "\n" "\0" | xargs -0 -I{} yabai -m rule --add app="^{}\$" title=".*" manage=on
 
 ## Some random global settings

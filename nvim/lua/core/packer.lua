@@ -123,4 +123,6 @@ return packer.startup(function(use)
   -- Another theme
   use { "catppuccin/nvim", as = "catppuccin" }
 
+  use { "ellisonleao/gruvbox.nvim" }
+
 end)
