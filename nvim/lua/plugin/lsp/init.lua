@@ -4,5 +4,6 @@ if not status_ok then
 end
 
 require "plugin.lsp.lsp-installer"
-require("plugin.lsp.handlers").setup()
+require "plugin.lsp.handlers".setup()
 require "plugin.lsp.null-ls"
+
