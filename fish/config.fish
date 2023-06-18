@@ -44,7 +44,9 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f /Users/humber/anaconda3/bin/conda
+    eval /Users/humber/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+end
 # <<< conda initialize <<<
 
 
