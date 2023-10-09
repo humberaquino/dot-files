@@ -72,10 +72,19 @@ return packer.startup(function(use)
 
   --> LSP plugins
 
- use { "williamboman/mason.nvim" }
- use { "williamboman/mason-lspconfig.nvim" }
+use {
+    'junnplus/lsp-setup.nvim',
+    requires = {
+        'neovim/nvim-lspconfig',
+        'williamboman/mason.nvim', -- optional
+        'williamboman/mason-lspconfig.nvim', -- optional
+    }
+}
 
- -- use("neovim/nvim-lspconfig") -- LSP base
+-- use("neovim/nvim-lspconfig") -- LSP base
+--  use { "williamboman/mason.nvim" }
+--  use { "williamboman/mason-lspconfig.nvim" }
+
  --  use("williamboman/nvim-lsp-installer") -- LSP installer
  --  use("hrsh7th/nvim-cmp") -- Autocompletion plugin
  --  use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
