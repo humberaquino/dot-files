@@ -68,14 +68,20 @@ return packer.startup(function(use)
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
+
+
   --> LSP plugins
-  use("neovim/nvim-lspconfig") -- LSP base
-  use("williamboman/nvim-lsp-installer") -- LSP installer
-  use("hrsh7th/nvim-cmp") -- Autocompletion plugin
-  use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
-  use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
-  use("onsails/lspkind-nvim")
-  use("jose-elias-alvarez/null-ls.nvim")
+
+ use { "williamboman/mason.nvim" }
+ use { "williamboman/mason-lspconfig.nvim" }
+
+ -- use("neovim/nvim-lspconfig") -- LSP base
+ --  use("williamboman/nvim-lsp-installer") -- LSP installer
+ --  use("hrsh7th/nvim-cmp") -- Autocompletion plugin
+ --  use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
+ --  use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
+ --  use("onsails/lspkind-nvim")
+ --  use("jose-elias-alvarez/null-ls.nvim")
 
   -- snippets
   use("L3MON4D3/LuaSnip") --snippet engine
