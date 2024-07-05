@@ -32,12 +32,12 @@ abbr --add ksd 'kubectl scale deployment'
 
 # Exa
 abbr --add tree 'exa -T'
-abbr --add ls 'exa'
+abbr --add ls exa
 abbr --add ll 'exa -l'
 abbr --add lll 'exa -abghHliS'
 
 # Elixir
-abbr --add m 'mix'
+abbr --add m mix
 abbr --add mdg 'mix deps.get'
 abbr --add mdc 'mix deps.compile'
 abbr --add mc 'mix compile'
@@ -49,7 +49,7 @@ abbr --add mt mix test
 abbr --add mtw mix test.watch
 
 # Python
-abbr --add py 'python'
+abbr --add py python
 
 # Node
 abbr --add en 'node -v'
@@ -59,14 +59,14 @@ abbr --add c code
 abbr --add cvc code .
 
 # Neovim
-abbr --add v 'nvim'
-abbr --add nv 'nvim'
+abbr --add v nvim
+abbr --add nv nvim
 
 # Emacs
-abbr --add e 'emacs'
+abbr --add e 'emacs -nw'
 
 # Terraform
-abbr --add tf 'terraform'
+abbr --add tf terraform
 
 # Vagrant
 abbr --add vs 'vagrant status'
