@@ -1,4 +1,4 @@
-export KUBECONFIG=$HOME/.kube/config 
+export KUBECONFIG=$HOME/.kube/config
 
 export EDITOR=nvim
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
@@ -30,7 +30,7 @@ set PATH /Users/humber/Programs/istio-1.15.3/bin $PATH
 export BAT_THEME="TwoDark"
 
 set fish_greeting
-set -x FZF_DEFAULT_COMMAND 'fd'
+set -x FZF_DEFAULT_COMMAND fd
 
 # Golang
 # set gopath (go env GOPATH)
@@ -49,3 +49,12 @@ set PATH $GOPATH/bin $GOROOT/bin $PATH
 
 
 source /usr/local/opt/asdf/libexec/asdf.fish
+
+
+# [ -f "/Users/humber/.ghcup/env" ] && source "/Users/humber/.ghcup/env" # ghcup-env
+fish_add_path "/Users/humber/.cabal/bin"
+fish_add_path "/Users/humber/.ghcup/bin"
+fish_add_path "/Users/humber/.rd/bin"
+fish_add_path "/Users/humber/.bin"
+fish_add_path "/Users/humber/.config/emacs/bin"
+fish_add_path "/Users/humber/.roswell/bin"
